@@ -1,0 +1,66 @@
+{   
+    "office": {
+        "$choose": {
+            "from": [
+                "London",
+                "Manchester",
+                "Liverpool"
+            ]
+        }
+    },
+    "eventDateTime": {
+        "$date": {
+            "min": "2020-05-01",
+            "max": "2020-06-01"
+        }
+    },
+    "personalInformation": {
+        "fullName": "$name",
+        "dob": {
+            "$date": {
+                "min": 1945,
+                "max": 2005
+            }
+        },
+        "documentNumber": {
+            "$join": {
+                "array": [
+                    {
+                        "$choose": {
+                            "from": [
+                                "UL",
+                                "UN",
+                                "UK",
+                                "PS",
+                                "QX",
+                                "FP"
+                            ]
+                        }
+                    },
+                    {
+                        "$string": {
+                            "length": 11,
+                            "pool": "0123456789"
+                        }
+                    }
+                ]
+            }
+        },
+        "birthPlace": "$city",
+        "gender": {
+            "$choose": {
+                "from": ["male","female"]
+            }
+        },
+        "nationality": {
+            "$country": {
+                "full": true
+            }
+        },
+        "residenceCountry": {
+            "$country": {
+                "full": true
+            }
+        }
+    }
+}

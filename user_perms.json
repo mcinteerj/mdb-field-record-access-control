@@ -1,0 +1,30 @@
+{
+  "userid": "london_user",
+  "filter": {
+    "office": "London"
+  }
+}
+{
+  "userid": "manchester_user",
+  "filter": {
+    "office": "Manchester"
+  }
+}
+{
+  "userid": "junior_london_user",
+  "filter": {
+    "office": "London"
+  },
+  "projection": {
+    "personalInformation": 0
+  }
+}
+{
+  "userid": "junior_manchester_user",
+  "filter": {
+    "office": "Manchester"
+  },
+  "projection": {
+    "personalInformation": 0
+  }
+}
