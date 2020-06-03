@@ -2,7 +2,6 @@
 import pymongo
 from bson.json_util import dumps
 from bson import json_util
-import demo_settings
 from datetime import datetime, timedelta
 import sys
 
