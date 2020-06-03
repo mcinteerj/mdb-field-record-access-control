@@ -34,7 +34,7 @@ curl https://raw.githubusercontent.com/mcinteerj/mdb-field-record-access-control
 
 >Note: you will need to update the relevant parameters in the `mongoimport` command. You will be able to find sample `mongoimport` commands for your cluster by navigating to the 'Command Line Tools' page for your cluster by clicking on the "`...`" button for the given cluster on your main cluster dashboard or by following [these instructions](https://docs.atlas.mongodb.com/import/mongoimport/).
 
-The commands will automatically download the content in the provided sample data files and pipe this into the `mongoimport` command. If you would prefer to do this as separate steps, you can download the respective files and load them using the `--file` parameter for mongoimport. 
+The commands will automatically download the content in the provided sample data files from this GitRepo and pipe this into the `mongoimport` command. If you would prefer to do this as separate steps, you can download the respective files ([events.json](./events.json) and [user_perms.json](./user_perms.json))and load them using the `--file` parameter for mongoimport. 
 
 #### user_perms.json
 This file was manually created and contains a series of user permission records of the following structure:
@@ -84,7 +84,7 @@ These instructions assume you have `python3` installed, and the `pymongo`, `dnsp
 
 Download the [./run_demo.py](./run_demo.py) script to the machine you will run your test from (and have whitelisted the IP address for). 
 
-Update the `URI_STRING` value in the `./run_demo.py script with the URI for your MongoDB Atlas cluster. 
+Update the `URI_STRING` value in the `./run_demo.py` script with the URI for your MongoDB Atlas cluster. 
 
 Run the script using the following command:
 ```bash
