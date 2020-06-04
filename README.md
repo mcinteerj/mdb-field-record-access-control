@@ -1,6 +1,8 @@
 # MongoDB Field/Record Level Access Control
 This content provided in this repo shows a simple demo of an approach to implementing field and/or record level access control in an application on top MongoDB - using permissions stored in a MongoDB collection.
 
+The recommended way to deliver on field or record level access requirements is through the use of [Read Only Views](https://docs.mongodb.com/manual/core/views/) as described in [this blog post](https://www.mongodb.com/blog/post/providing-least-privileged-data-access-in-mongodb). However, there are situations where you may have more specific access control requirements that mean views are not an appropriate option - particularly if there are many different possible views which can change arbirtrarily on a regular basis. In such cases, it may be necessary to implement such controls in the application layer as described in this repository. 
+
 The data in this repository is generated dummy data, and the code is provided as a functional/conceptual approach to delivering field and/or record level access control - rather than being a production-ready implementation fo such control. It is provided for demo/example purposes only. 
 
 ## Use Case
